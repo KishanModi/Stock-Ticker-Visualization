@@ -1,0 +1,2 @@
+plotly==5.8.0
+tenacity==8.0.1
