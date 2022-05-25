@@ -82,6 +82,7 @@ def plots(data):
             rangeslider_thickness=0.05,
         )
     )
+    fig.update_layout(showlegend=False)
     #axis lines
     fig.update_xaxes(showline=True, linewidth=2, linecolor="black", mirror=True)
     fig.update_yaxes(showline=True, linewidth=2, linecolor="black", mirror=True)
