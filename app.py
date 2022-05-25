@@ -24,4 +24,4 @@ if st.button('Visulize'):
     col2.metric("Date", date)
 
     with st.container():
-	    st.plotly_chart(fig)
+	    st.plotly_chart(fig,use_container_width=True)
