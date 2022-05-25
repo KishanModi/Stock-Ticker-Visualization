@@ -63,7 +63,7 @@ def plots(data):
     fig.append_trace(ATR_CLOSE, row=5, col=1)
 
     fig.update_layout(
-        title_text="German 10 YR Bund Futures - Jun 22", height=900, width=1400
+        title_text="German 10 YR Bund Futures - Jun 22"
     )
 
     #adding time frame buttons
