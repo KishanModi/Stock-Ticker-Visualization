@@ -26,11 +26,11 @@ ATR = go.Scatter(x=data['Date'],
 ATR_STD = go.Scatter(x=data['Date'],
                 y=data['atr_std'],legendgroup="ATR_STD",name="ATR_STD")
 ATR_CLOSE = go.Scatter(x=data['Date'],
-                y=data['close_std'],legendgroup="ATR_CLOSE",name="ATR_CLOSE")
+                y=data['close_std'],legendgroup="CLOSE_STD",name="CLOSE_STD")
 
 fig = make_subplots(rows=5, cols=1,
                           shared_xaxes=True, shared_yaxes=False,
-                           vertical_spacing=0.095,row_width=[2,2,2,0.5,14],subplot_titles=("Price", "","ATR", "ATR_STD", "ATR_CLOSE"))
+                           vertical_spacing=0.075,row_width=[3,3,3,0.1,10],subplot_titles=("Price", "","ATR", "ATR_STD", "CLOSE_STD"))
 fig.append_trace(Candle, row=1, col=1)
 
 fig.append_trace(ATR,row=3, col=1)
@@ -41,7 +41,7 @@ fig.append_trace(ATR_CLOSE,row=5, col=1)
 
 
 fig.update_layout(title_text="Data Visualization",
-                  height=700, width=1000)
+                  height=900, width=1400)
 # fig.update_xaxes(
 #     rangeselector=dict(
 #         buttons=list([
@@ -77,7 +77,7 @@ fig.update_layout(
                      stepmode="backward"),
                 dict(step="all")
             ]),
-        type="date")
+        type="date",rangeslider_thickness = 0.05)
     )
 
 with st.container():
